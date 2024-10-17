@@ -11,7 +11,6 @@ const AddCorp = ({ isOpen, onClose }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission
     console.log({ cropName, soilType, image });
   };
 
@@ -58,7 +57,7 @@ const AddCorp = ({ isOpen, onClose }) => {
             />
           </div>
 
-          <div className="flex justfiy-between items-center w-72 cursor-pointer relative border border-[#308B34] mb-4 rounded-xl ml-[86px] p-1 mb-40">
+          <div className="flex justfiy-between items-center w-72 cursor-pointer relative border border-[#308B34] rounded-xl ml-[86px] p-1 mb-40">
             <span className=" mr-10 text-gray-400 border">Add Image</span>
 
             <img src="./fileExplorer.png" alt="Dosya Seç" className="ml-16" />

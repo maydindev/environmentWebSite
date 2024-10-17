@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import FarmAnalytics from "../pages/FarmAnalytics";
 import Livestock from "../pages/Livestock";
 import DashboardFarms from "../pages/DashboardFarms";
+import AddFarm from "./AddFarm";
 
 const Dashboard = () => {
 
@@ -10,7 +11,7 @@ const Dashboard = () => {
   const [livestock, setLivestock] = useState(false)
   const [dashboardFarms, setDashboardFarms] = useState(false)
 
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="flex justify-center items-center bg-[#308B34] min-h-screen">
@@ -40,7 +41,12 @@ const Dashboard = () => {
         </nav>
 
         <div className="flex justify-center items-center rounded-md text-[#308B34] font-bold text-2xl  mt-40 w-[250px] h-12 bg-white">
-          <button>+ Add Farm</button>
+          <button
+            onClick={() => setIsModalOpen(true)}
+          >
+            + Add Farm
+          </button>
+          <AddFarm isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
       </div>
 
