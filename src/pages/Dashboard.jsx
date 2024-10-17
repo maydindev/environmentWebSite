@@ -7,9 +7,9 @@ import AddFarm from "./AddFarm";
 
 const Dashboard = () => {
 
-  const [farmAnalytics, setFarmAnalytics] = useState(true)
+  const [farmAnalytics, setFarmAnalytics] = useState(false)
   const [livestock, setLivestock] = useState(false)
-  const [dashboardFarms, setDashboardFarms] = useState(false)
+  const [dashboardFarms, setDashboardFarms] = useState(true)
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -28,13 +28,13 @@ const Dashboard = () => {
 
         <nav className="mt-40">
           <ul className="text-2xl text-white font-bold w-[304px]">
-            <li className="flex justify-start bg-white text-[#308B34] text-start h-10 mb-5">
+            <li className={`${farmAnalytics ? "bg-white text-[#308B34]" : "bg-[#308B34] text-white"} flex justify-start text-start h-10 mb-5`}>
             <button className="ml-10" onClick={() => {setFarmAnalytics(true); setLivestock(false); setDashboardFarms(false)}}>Farm Analytics</button>
             </li>
-            <li className="flex justify-start bg-[#308B34] text-white text-center h-10 mb-5">
+            <li className={`${livestock ? "bg-white text-[#308B34]" : "bg-[#308B34] text-white"} flex justify-start text-start h-10 mb-5`}>
             <button className="ml-10" onClick={() => {setLivestock(true); setFarmAnalytics(false); setDashboardFarms(false)}}>Livestock</button>
             </li>
-            <li className="flex justify-start bg-[#308B34] text-white text-center h-10 mb-5">
+            <li className={`${dashboardFarms ? "bg-white text-[#308B34]" : "bg-[#308B34] text-white"} flex justify-start text-start h-10 mb-5`}>
               <button className="ml-10 " onClick={() => {setDashboardFarms(true); setLivestock(false); setFarmAnalytics(false); }}>Dashboard</button>
             </li>
           </ul>

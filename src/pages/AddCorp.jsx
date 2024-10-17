@@ -63,6 +63,7 @@ const AddCorp = ({ isOpen, onClose }) => {
             <img src="./fileExplorer.png" alt="Dosya Seç" className="ml-16" />
             <input
               type="file"
+              onChange={handleImageUpload}
               className=" flex justify-center items-center absolute right-0 top-0 opacity-0 w-full h-full cursor-pointer"
             />
           </div>

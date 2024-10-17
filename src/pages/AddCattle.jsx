@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-const AddFarm = ({ isOpen, onClose }) => {
-  const [farmName, setFarmName] = useState("");
-  const [farmSize, setFarmSize] = useState("");
+const AddCattle = ({ isOpen, onClose }) => {
+  const [cattleType, setCattleType] = useState("");
+  const [breed, setBreed] = useState("");
+  const [count, setCount] = useState("");
   const [image, setImage] = useState(null);
-  const [cropType, setCropType] = useState("");
+  const [gender, setGender] = useState("");
 
   const handleImageUpload = (event) => {
     setImage(event.target.files[0]);
@@ -12,7 +13,7 @@ const AddFarm = ({ isOpen, onClose }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ farmName, farmSize, image, cropType });
+    console.log({ cattleType, breed, count, image, gender });
   };
 
   if (!isOpen) return null;
@@ -27,34 +28,44 @@ const AddFarm = ({ isOpen, onClose }) => {
           BACK
         </button>
         <h2 className="text-4xl text-center font-semibold text-[#308B34] mb-4">
-          FARM DETAILS
+          CATTLE DETAILS
         </h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col m-20">
           <div className="mb-10 flex">
-            <img src="./farm.png" alt="" className="mr-10" />
+            <img src="./cattle.png" alt="" className="mr-10" />
             <input
               type="text"
-              value={farmName}
-              onChange={(e) => setFarmName(e.target.value)}
+              value={cattleType}
+              onChange={(e) => setCattleType(e.target.value)}
               className="w-full border border-[#308B34] text-gray-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#308B34]"
-              placeholder="Farm Name"
+              placeholder="Enter the Cattle Type"
+            />
+          </div>
+
+          <div className="mb-10 ml-20 flex">
+            <input
+              type="text"
+              value={breed}
+              onChange={(e) => setBreed(e.target.value)}
+              className="w-full border border-[#308B34] text-gray-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#308B34]"
+              placeholder="Enter the Breed"
             />
           </div>
 
           <div className="mb-10 flex">
-            <img src="./farmSize.png" alt="" className="mr-12" />
+            <img src="./count.png" alt="" className="mr-10" />
             <input
               type="text"
-              value={farmSize}
-              onChange={(e) => setFarmSize(e.target.value)}
+              value={count}
+              onChange={(e) => setCount(e.target.value)}
               className="w-full border border-[#308B34] text-gray-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#308B34]"
-              placeholder="Farm Size (in acres)"
+              placeholder="Count"
             />
           </div>
 
-          <div className="flex justfiy-between items-center w-[300px] cursor-pointer relative border border-[#308B34] rounded-xl ml-[86px] p-1 mb-10">
-            <span className=" mr-10 text-gray-400">Farm Image</span>
+          <div className="flex justfiy-between items-center w-72 cursor-pointer relative border border-[#308B34] rounded-xl ml-[75px] p-1 mb-10">
+            <span className=" mr-10 text-gray-400">Images</span>
 
             <img src="./fileExplorer.png" alt="Dosya Seç" className="ml-16" />
             <input
@@ -65,18 +76,17 @@ const AddFarm = ({ isOpen, onClose }) => {
           </div>
 
           <div className="mb-40 flex">
-            <img src="./cropType.png" alt="" className="mr-12" />
+            <img src="./crop2.png" alt="" className="mr-10" />
             <select
-              value={cropType}
-              onChange={(e) => setCropType(e.target.value)}
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
               className="w-full border text-gray-400 border-[#308B34] rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#308B34] custom-combobox"
             >
               <option disabled selected hidden value="">
-                Crop Type
+                Male/Female
               </option>
-              <option value="wheat">Wheat</option>
-              <option value="corn">Corn</option>
-              <option value="rice">Rice</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
           </div>
 
@@ -94,4 +104,4 @@ const AddFarm = ({ isOpen, onClose }) => {
   );
 };
 
-export default AddFarm;
+export default AddCattle;

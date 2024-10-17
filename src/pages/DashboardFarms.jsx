@@ -25,7 +25,9 @@ const DashboardFarms = () => {
           </ul>
         </nav>
       </div>
-      <div className="flex justify-between items-center m-10 w-full">
+      <div className="ml-[750px] text-3xl font-bold text-[#308B34]">Crops Distribution</div>
+      <div className="flex justify-between items-center mt-3 w-full">
+        
         <div className="relative flex flex-col justify-center items-start mr-10 ">
           <img
             src="./farms.jpeg"
@@ -81,7 +83,7 @@ const DashboardFarms = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between items-center text-[#308B34] font-bold pt-5 rounded-xl shadow-2xl w-[510px] h-[652px]">
+        <div className="flex flex-col justify-between items-center text-[#308B34] font-bold pt-5 rounded-2xl shadow-2xl w-[510px] h-[652px]">
           <div className="flex justify-center items-center">
             <div className="relative flex justify-center items-center mr-10">
               <svg

@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}", // Vite projesinde js, ts, jsx, tsx dosyalarını kapsar
   ],
   theme: {
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [],
 }
