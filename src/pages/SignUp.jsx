@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -117,9 +118,9 @@ const SignUp = () => {
             </label>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <button className="bg-[#308B34] w-60 h-10 mb-5 rounded-xl border-2 border-[#308B34] font-bold text-white text-xl">
-              Sign Up
-            </button>
+            <div className="flex justify-center items-center bg-[#308B34] w-60 h-10 mb-5 rounded-xl border-2 border-[#308B34] font-bold text-white text-xl">
+              <Link to="/dashboard">Sign Up</Link>
+            </div>
           </div>
         </div>
       </div>

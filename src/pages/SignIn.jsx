@@ -74,9 +74,12 @@ const SignIn = () => {
             </label>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <button className="bg-[#308B34] w-60 h-10 mb-5 rounded-xl border-2 border-[#308B34] font-bold text-white text-xl">
+            <div className="flex justify-center items-center bg-[#308B34] w-60 h-10 mb-5 rounded-xl border-2 border-[#308B34] font-bold text-white text-xl">
+            <Link to="dashboard">
               Log In
-            </button>
+            </Link>
+            </div>
+            
             <div className="flex justify-center items-center bg-white w-60 h-10 mb-5 rounded-xl border-2 border-[#308B34] text-center font-bold text-[#308B34] text-xl">
               <Link to="signup">Sign Up</Link>
             </div>

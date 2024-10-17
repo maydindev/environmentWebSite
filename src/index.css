@@ -77,6 +77,19 @@ body {
   color: var(--textColor);
 }
 
+.custom-combobox {
+  /*width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;*/
+  appearance: none; /* Varsayılan simgeyi gizle */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('comboboxArrowDown.png') no-repeat right 10px center;
+  background-size: 20px;
+}
+
 p {
   margin-bottom: 1.5rem;
   max-width: 40em;
